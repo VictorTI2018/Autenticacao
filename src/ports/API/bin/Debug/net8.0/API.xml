@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="T:API.Controllers.AuthController">
+            <summary>
+            Controller para gerenciar autenticação
+            </summary>
+        </member>
+        <member name="M:API.Controllers.AuthController.#ctor(API.Controllers.Presenters.User.IUserPresenter)">
+            <summary>
+            Controller para gerenciar autenticação
+            </summary>
+        </member>
+        <member name="T:API.Controllers.Presenters.User.IUserPresenter">
+            <summary>
+            Ge
+            </summary>
+        </member>
+        <member name="T:API.Filters.FilterException">
+            <summary>
+            <inheritdoc />
+            </summary>
+        </member>
+        <member name="M:API.Filters.FilterException.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+             <inheritdoc />
+            </summary>
+        </member>
+    </members>
+</doc>

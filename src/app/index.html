@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo - Autenticação</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <card-component title="Login" width="350" id="login">
+            <span slot="body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">E-mail</span>
+                    <input 
+                    type="email" 
+                    class="form-control" 
+                    placeholder="E-mail" 
+                    aria-label="E-mail" 
+                    title="E-mail"
+                    id="login_email"
+                    >
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Senha</span>
+                    <input 
+                    type="password" 
+                    class="form-control" 
+                    placeholder="Senha" 
+                    aria-label="Senha" 
+                    title="Senha"
+                    id="login_senha"
+                    >
+                </div>
+            </span>
+            <div slot="footer">
+                <a onclick="registerScreen()" class="link">Registrar</a>
+                <button-component 
+                text="Entrar" 
+                color="0d6efd" 
+                hover="0b5ed7" 
+                hoverBorder="0a58ca"
+                onclick="authenticate()">
+            </button-component>
+            </div>
+        </card-component>
+
+        <card-component title="Registrar" width="450" id="register">
+            <span slot="body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Nome</span>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Nome" 
+                    aria-label="Nome" 
+                    title="Nome"
+                    id="register_nome"
+                    >
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" >E-mail</span>
+                    <input 
+                    type="email" 
+                    class="form-control" 
+                    placeholder="E-mail" 
+                    aria-label="E-mail" 
+                    title="E-mail"
+                    id="register_email"
+                    >
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Senha</span>
+                    <input 
+                    type="password" 
+                    class="form-control" 
+                    placeholder="Senha" 
+                    aria-label="Senha" 
+                    title="Senha"
+                    id="register_senha"
+                    >
+                </div>
+            </span>
+            <div slot="footer">
+                <a onclick="loginScreen()" class="link">Voltar</a>
+
+                <button-component 
+                text="Registrar" 
+                color="0d6efd" 
+                hover="0b5ed7" 
+                hoverBorder="0a58ca"
+                onclick="register()">
+            </button-component>
+            </div>
+        </card-component>
+    </div>
+</body>
+<script src="./js/components/CardComponent.js"></script>
+<script src="./js/components/ButtonComponent.js"></script>
+<script src="./js/components/components.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/ajax/index.js"></script>
+<script src="./js/services/user/userService.js"></script>
+<script src="./js/services/user/authService.js"></script>
+</html>
