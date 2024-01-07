@@ -109,6 +109,15 @@
 }
 
 
+#painel {
+    display: grid;
+    height: 100dvh;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: "header" "content" "footer";
+    grid-template-columns: 1fr;
+}
+
+
 @media (prefers-reduced-motion: reduce){
     .form-control {
         transition: none;

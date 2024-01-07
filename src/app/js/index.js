@@ -1,3 +1,5 @@
+'use strict'
+
 function registerScreen() {
     var login = document.getElementById('login')
     var register = document.getElementById('register')
@@ -12,6 +14,8 @@ function loginScreen () {
     login.style.display = "block"
 }
 
+(function () {
+    
 const init = () => {
     var register = document.getElementById('register')
     register.style.display = "none"
@@ -20,10 +24,21 @@ const init = () => {
 
     if (isAuthenticate) {
         var login = document.getElementById('login')
+        var app = document.getElementById('app')
+
         register.style.display = "none"
         login.style.display = "none"
-    }
+
+        app.style.display = 'block'
+        app.style.padding = '10px 20px'
         
+        var router = new Router([
+            new Route('home', 'categorias.html', true)
+        ])
+
+        console.log(router)
+    }
 }
 
 init()
+}())
