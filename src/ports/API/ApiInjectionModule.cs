@@ -1,4 +1,5 @@
-﻿using API.Controllers.Presenters.User;
+﻿using API.Controllers.Presenters.Categorias;
+using API.Controllers.Presenters.User;
 
 namespace API
 {
@@ -7,6 +8,7 @@ namespace API
         public static void AddPresenterModule(this IServiceCollection services)
         {
             services.AddScoped<IUserPresenter, UserPresenter>();
+            services.AddScoped<ICategoriasPresenter, CategoriasPresenter>();
         }
     }
 }

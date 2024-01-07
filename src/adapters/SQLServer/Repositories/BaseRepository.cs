@@ -1,7 +1,9 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Shared.Exceptions;
 using SQLServer.Context;
+using System.Linq.Expressions;
 
 namespace SQLServer.Repositories
 {
@@ -10,6 +12,8 @@ namespace SQLServer.Repositories
     {
         private readonly MyContext _context = context;
 
+        public async Task<T?> FilterAsync(Expression<Func<T, bool>> expression)
+            => await _context.Set<T>().Where(expression).FirstOrDefaultAsync();
 
         public async Task<T> AddAsync(T entity)
         {

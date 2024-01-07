@@ -8,93 +8,59 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body >
+<body>
     <div id="app">
 
-        <card-component title="Login" width="350" id="login">
+        <card-component title="Login" style="width: 25%;" id="login">
             <span slot="body">
                 <div class="input-group mb-3">
                     <span class="input-group-text">E-mail</span>
-                    <input 
-                    type="email" 
-                    class="form-control" 
-                    placeholder="E-mail" 
-                    aria-label="E-mail" 
-                    title="E-mail"
-                    id="login_email"
-                    >
+                    <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail" title="E-mail"
+                        id="login_email">
                 </div>
                 <div class="input-group">
                     <span class="input-group-text">Senha</span>
-                    <input 
-                    type="password" 
-                    class="form-control" 
-                    placeholder="Senha" 
-                    aria-label="Senha" 
-                    title="Senha"
-                    id="login_senha"
-                    >
+                    <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" title="Senha"
+                        id="login_senha">
                 </div>
             </span>
             <div slot="footer">
-                <a onclick="registerScreen()" class="link">Registrar</a>
-                <button-component 
-                text="Entrar" 
-                color="0d6efd" 
-                hover="0b5ed7" 
-                hoverBorder="0a58ca"
-                onclick="authenticate()">
-            </button-component>
+                <div class="content-footer">
+                    <a onclick="registerScreen()" class="link">Registrar</a>
+                    <button-component text="Entrar" color="0d6efd" hover="0b5ed7" hoverBorder="0a58ca"
+                        onclick="authenticate()">
+                    </button-component>
+                </div>
             </div>
         </card-component>
 
-        <card-component title="Registrar" width="450" id="register">
+        <card-component title="Registrar" style="width: 35%" id="register">
             <span slot="body">
                 <div class="input-group mb-3">
                     <span class="input-group-text">Nome</span>
-                    <input 
-                    type="text" 
-                    class="form-control" 
-                    placeholder="Nome" 
-                    aria-label="Nome" 
-                    title="Nome"
-                    id="register_nome"
-                    >
+                    <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" title="Nome"
+                        id="register_nome">
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" >E-mail</span>
-                    <input 
-                    type="email" 
-                    class="form-control" 
-                    placeholder="E-mail" 
-                    aria-label="E-mail" 
-                    title="E-mail"
-                    id="register_email"
-                    >
+                    <span class="input-group-text">E-mail</span>
+                    <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail" title="E-mail"
+                        id="register_email">
                 </div>
                 <div class="input-group">
                     <span class="input-group-text">Senha</span>
-                    <input 
-                    type="password" 
-                    class="form-control" 
-                    placeholder="Senha" 
-                    aria-label="Senha" 
-                    title="Senha"
-                    id="register_senha"
-                    >
+                    <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" title="Senha"
+                        id="register_senha">
                 </div>
             </span>
             <div slot="footer">
-                <a onclick="loginScreen()" class="link">Voltar</a>
-
-                <button-component 
-                text="Registrar" 
-                color="0d6efd" 
-                hover="0b5ed7" 
-                hoverBorder="0a58ca"
-                onclick="register()">
-            </button-component>
+                <div class="content-footer">
+                    <a onclick="loginScreen()" class="link">Voltar</a>
+                    <button-component text="Registrar" color="0d6efd" hover="0b5ed7" hoverBorder="0a58ca"
+                        onclick="register()">
+                    </button-component>
+                </div>
             </div>
+
         </card-component>
     </div>
 </body>
@@ -107,5 +73,6 @@
 <script src="./js/ajax/index.js"></script>
 <script src="./js/services/user/userService.js"></script>
 <script src="./js/services/user/authService.js"></script>
+<script src="./js/services/categorias/categoriasService.js"></script>
 
 </html>

@@ -1,8 +1,22 @@
-<card-component title="Produtos" style="width: 100%;">
+<card-component title="Categorias" style="width: 100%;">
     <div slot="body">
-        teste
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nome</span>
+            <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" title="Nome"
+                id="categorias_nome">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Descrição</span>
+            <textarea class="form-control" placeholder="Nome" aria-label="Nome" title="Descrição"
+                id="categorias_descricao"></textarea>
+        </div>
     </div>
     <div slot="footer">
-        footer
+        <div class="app-painel-footer">
+            <button-component text="Cadastrar" color="198754" hover="198754" hoverBorder="198754"
+            onclick="cadastrarCategoria()">
+            </button-component>
+        </div>
     </div>
 </card-component>

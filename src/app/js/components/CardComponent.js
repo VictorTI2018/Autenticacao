@@ -70,9 +70,6 @@ class CardComponent extends HTMLElement {
             padding: 0.5rem 1rem;
             background-color: rgba(0,0,0,.03);
             border-top: 1px solid rgba(0,0,0,.125);
-            display: flex;
-            align-items:center;
-            justify-content: space-around;
         }
         </style>
         

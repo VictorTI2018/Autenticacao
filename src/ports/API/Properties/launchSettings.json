@@ -18,7 +18,8 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "CONNECTION_STRING_SQL_SERVER": "Server=localhost;Database=Catalogo;Trusted_Connection=True;Encrypt=False",
-        "TOKEN_SECRET": "JzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlZJQ1RPUkBURVNURS5DT00iLCJpYXQiOjE1MTYyMzkwMjJ9"
+        "TOKEN_SECRET": "JzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlZJQ1RPUkBURVNURS5DT00iLCJpYXQiOjE1MTYyMzkwMjJ9",
+        "REDIS_CONNECTION": "127.0.0.1:6379"
       }
     },
     "IIS Express": {

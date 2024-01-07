@@ -101,11 +101,18 @@
     opacity: 0.5;
 }
 
-[slot="footer"] {
+.content-footer {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.app-painel-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 

@@ -29,6 +29,7 @@ builder.Services.AddSwaggerGen(options =>
 
 #region DI
 builder.Services.AddSQLServerModule(Environment.GetEnvironmentVariable("CONNECTION_STRING_SQL_SERVER"));
+builder.Services.AddRedisModule(Environment.GetEnvironmentVariable("REDIS_CONNECTION"));
 builder.Services.AddReositoryModule();
 builder.Services.AddServicesModule();
 builder.Services.AddPresenterModule();
@@ -79,10 +80,9 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.UseAuthorization();
-
 app.UseCors("autenticacaoCors");
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

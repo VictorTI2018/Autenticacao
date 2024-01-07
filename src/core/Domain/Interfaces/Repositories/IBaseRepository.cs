@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using System.Linq.Expressions;
 
 namespace Domain.Interfaces.Repositories
 {
@@ -6,5 +7,7 @@ namespace Domain.Interfaces.Repositories
         where T : BaseEntity
     {
         Task<T> AddAsync(T entity);
+        Task<T?> FilterAsync(Expression<Func<T, bool>> expression);
+
     }
 }

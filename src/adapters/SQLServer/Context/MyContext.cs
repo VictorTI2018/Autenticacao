@@ -10,6 +10,7 @@ namespace SQLServer.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserEntityMapping());
+            modelBuilder.ApplyConfiguration(new CategoriasEntityMapping());
 
             base.OnModelCreating(modelBuilder);
         }
